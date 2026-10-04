@@ -21,7 +21,7 @@ export const listarAliens = async (_req: Request, res: Response) => {
     const aliens = await Alien.findAll();
 
     return res.status(200).json(aliens);
-  } catch (error) {
+  } catch {
     return res.status(500).json({
       mensagem: 'Erro ao buscar aliens.',
     });
@@ -48,7 +48,7 @@ export const buscarAlienPorId = async (req: Request, res: Response) => {
     }
 
     return res.status(200).json(alien);
-  } catch (error) {
+  } catch {
     return res.status(500).json({
       mensagem: 'Erro ao buscar alien.',
     });
@@ -120,10 +120,7 @@ export const criarAlien = async (req: Request, res: Response) => {
     return res.status(201).json(alien);
   } catch (error) {
     return res.status(400).json({
-      mensagem:
-        error instanceof Error
-          ? error.message
-          : 'Erro ao criar alien.',
+      mensagem: error instanceof Error ? error.message : 'Erro ao criar alien.',
     });
   }
 };
@@ -210,9 +207,7 @@ export const atualizarAlien = async (req: Request, res: Response) => {
   } catch (error) {
     return res.status(400).json({
       mensagem:
-        error instanceof Error
-          ? error.message
-          : 'Erro ao atualizar alien.',
+        error instanceof Error ? error.message : 'Erro ao atualizar alien.',
     });
   }
 };
@@ -239,7 +234,7 @@ export const excluirAlien = async (req: Request, res: Response) => {
     await alien.destroy();
 
     return res.status(204).send();
-  } catch (error) {
+  } catch {
     return res.status(500).json({
       mensagem: 'Erro ao excluir alien.',
     });

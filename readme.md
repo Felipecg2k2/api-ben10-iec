@@ -2,7 +2,6 @@
 
 API RESTful desenvolvida para um catálogo de aliens do universo **Ben 10**.
 
-
 ## Tecnologias utilizadas
 
 - Node.js
@@ -39,22 +38,21 @@ api-ben10/
 └── README.md
 ```
 
-
 ## Entidade
 
 A API possui a entidade `Alien`, com os seguintes atributos:
 
-| Campo | Tipo | Descrição |
-|---|---|---|
-| `id` | integer | Identificador único |
-| `nome` | string | Nome do alien |
-| `especie` | string | Espécie do alien |
-| `planeta` | string | Planeta de origem |
-| `poderPrincipal` | string | Principal poder do alien |
-| `nivelPoder` | integer | Nível de poder de 1 a 10 |
-| `disponivelOmnitrix` | boolean | Indica se está disponível no Omnitrix |
-| `createdAt` | datetime | Data de criação |
-| `updatedAt` | datetime | Data da última atualização |
+| Campo                | Tipo     | Descrição                             |
+| -------------------- | -------- | ------------------------------------- |
+| `id`                 | integer  | Identificador único                   |
+| `nome`               | string   | Nome do alien                         |
+| `especie`            | string   | Espécie do alien                      |
+| `planeta`            | string   | Planeta de origem                     |
+| `poderPrincipal`     | string   | Principal poder do alien              |
+| `nivelPoder`         | integer  | Nível de poder de 1 a 10              |
+| `disponivelOmnitrix` | boolean  | Indica se está disponível no Omnitrix |
+| `createdAt`          | datetime | Data de criação                       |
+| `updatedAt`          | datetime | Data da última atualização            |
 
 ## Pré-requisitos
 
@@ -227,14 +225,14 @@ DELETE /aliens/1
 
 ## Status HTTP utilizados
 
-| Status | Utilização |
-|---|---|
-| `200` | Operação realizada com sucesso |
-| `201` | Recurso criado com sucesso |
-| `204` | Recurso excluído com sucesso |
-| `400` | Dados inválidos |
-| `404` | Recurso não encontrado |
-| `500` | Erro interno do servidor |
+| Status | Utilização                     |
+| ------ | ------------------------------ |
+| `200`  | Operação realizada com sucesso |
+| `201`  | Recurso criado com sucesso     |
+| `204`  | Recurso excluído com sucesso   |
+| `400`  | Dados inválidos                |
+| `404`  | Recurso não encontrado         |
+| `500`  | Erro interno do servidor       |
 
 ## Validações
 
