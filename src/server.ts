@@ -21,6 +21,7 @@ try {
 
   app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
+    console.log(`Documentação API em http://localhost:${PORT}/api-docs/`);
   });
 } catch (error) {
   console.error('Erro ao iniciar a aplicação:', error);
